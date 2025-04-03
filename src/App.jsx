@@ -1,35 +1,82 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import styles from "./App.module.css";
+import { Chat } from "./components/Chat/Chat";
+import { Controls } from "./components/Chat/Controls/Controls";
+import { Assistant } from "./assistants/openai";
+import { Loader } from "./components/Loader/Loader";
+
+// import { Assistant } from "./assistants/googleai";
+
+// function App() {
+//   const [messages, setMessages] = useState([]);
+//   function addMessage(message) {
+//     setMessages((prevMessages) => [...prevMessages, message]);
+//   }
+//   async function handleContentSend(content) {
+//     addMessage({ content, role: "user" });
+//     try {
+//       const result = await chat.sendMessage(content);
+//       addMessage({ content: result.response.text(), role: "assistant" });
+//     } catch {
+//       addMessage({
+//         content: "Sorry, I couldn't process your request. Please try again!",
+//         role: "system",
+//       });
+//     }
+//   }
+//   return (
+//     <div className={styles.App}>
+//       <header className={styles.Header}>
+//         <img className={styles.Logo} src="/chat-bot.png" />
+//         <h2 className={styles.Title}>AI Chatbot</h2>
+//       </header>
+//       <div className={styles.ChatContainer}>
+//         <Chat messages={messages} />
+//       </div>
+//       <Controls onSend={handleContentSend} />
+//     </div>
+//   );
+// }
+// export default App;
 
 function App() {
-  const [count, setCount] = useState(0)
+  const assistant = new Assistant();
+  const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  function addMessage(message) {
+    setMessages((prevMessages) => [...prevMessages, message]);
+  }
+
+  async function handleContentSend(content) {
+    setLoading(true);
+    addMessage({ content, role: "user" });
+    try {
+      const result = await assistant.chat(content, messages);
+      addMessage({ content: result, role: "assistant" });
+    } catch {
+      addMessage({
+        content: "Sorry, I couldn't process your request. Please try again!",
+        role: "system",
+      });
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className={styles.App}>
+      {loading && <Loader />}
+      <header className={styles.Header}>
+        <img className={styles.Logo} src="/chat-bot.png" />
+        <h2 className={styles.Title}>AI Chatbot</h2>
+      </header>
+      <div className={styles.ChatContainer}>
+        <Chat messages={messages} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <Controls isDisabled={loading} onSend={handleContentSend} />
+    </div>
+  );
 }
 
-export default App
+export default App;
