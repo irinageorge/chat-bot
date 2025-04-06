@@ -22,8 +22,17 @@ export class Assistant {
     } catch (error) {
       console.error("Gemini API error:", error);
       throw new Error(
-        error?.message || "An error occurred while communicating with Gemini AI."
+        error?.message ||
+          "An error occurred while communicating with Gemini AI."
       );
+    }
+  }
+
+  async *chatStream(content) {
+    const result = await this.#chat.sendMessageStream(content);
+
+    for await (const chunk of result.stream) {
+      yield chunk.text();
     }
   }
 }
