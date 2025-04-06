@@ -1,15 +1,15 @@
-# 💬 Chat Bot 1.0
+# ![image](https://github.com/user-attachments/assets/13ecf90a-e679-41c1-bb3b-5181c9d56602) Chat Bot 1.0
 
 A simple yet powerful AI chatbot app built with **React 19** and **Vite 6**, using the **Google Generative AI** and **OpenAI** APIs. Includes Markdown rendering, auto-resizing text areas, and modern tooling for linting and developer experience.
 
-## 🚀 Features
+## Features
 
-- ⚡️ Vite for lightning-fast dev/build
-- 🧠 Google & OpenAI APIs for AI chat
-- 📝 React Markdown support
-- 🔄 Auto-resizing chat input with `react-textarea-autosize`
+- Vite for lightning-fast dev/build
+- Google & OpenAI APIs for AI chat
+- React Markdown support
+- Auto-resizing chat input with `react-textarea-autosize`
 
-## 📦 Tech Stack
+## Tech Stack
 
 - [React 19](https://react.dev/)
 - [Vite 6](https://vitejs.dev/)
@@ -18,7 +18,7 @@ A simple yet powerful AI chatbot app built with **React 19** and **Vite 6**, usi
 - [react-markdown](https://www.npmjs.com/package/react-markdown)
 - [react-textarea-autosize](https://www.npmjs.com/package/react-textarea-autosize)
 
-## 🛠️ Getting Started
+## 🛠Getting Started
 
 ### Prerequisites
 
