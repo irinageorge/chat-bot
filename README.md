@@ -1,12 +1,53 @@
-# React + Vite
+# 💬 Chat Bot 1.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple yet powerful AI chatbot app built with **React 19** and **Vite 6**, using the **Google Generative AI** and **OpenAI** APIs. Includes Markdown rendering, auto-resizing text areas, and modern tooling for linting and developer experience.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡️ Vite for lightning-fast dev/build
+- 🧠 Google & OpenAI APIs for AI chat
+- 📝 React Markdown support
+- 🔄 Auto-resizing chat input with `react-textarea-autosize`
 
-## Expanding the ESLint configuration
+## 📦 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React 19](https://react.dev/)
+- [Vite 6](https://vitejs.dev/)
+- [@google/generative-ai](https://www.npmjs.com/package/@google/generative-ai)
+- [openai](https://www.npmjs.com/package/openai)
+- [react-markdown](https://www.npmjs.com/package/react-markdown)
+- [react-textarea-autosize](https://www.npmjs.com/package/react-textarea-autosize)
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js ≥ 18
+- NPM ≥ 9
+
+### Installation
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/your-username/chat-bot-1-0.git
+cd chat-bot-1-0
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Copy and update your API keys in the `.env` file:
+
+```bash
+cp .env.example .env
+```
+
+4. Start the dev server:
+
+```bash
+npm run dev
+```
