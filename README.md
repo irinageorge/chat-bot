@@ -1,6 +1,6 @@
 <div align="center">
   <h1>
-    <img src="https://github.com/user-attachments/assets/13ecf90a-e679-41c1-bb3b-5181c9d56602" alt="Chat Bot Logo" height="16" />
+    <img src="https://github.com/user-attachments/assets/13ecf90a-e679-41c1-bb3b-5181c9d56602" alt="Chat Bot Logo" height="32" />
     Chat Bot 1.0
   </h1>
 </div>
