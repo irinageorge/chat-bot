@@ -1,4 +1,4 @@
-<div align="center">
+<div style="display: flex; justify-content: center>
   <h1>
     <img src="https://github.com/user-attachments/assets/13ecf90a-e679-41c1-bb3b-5181c9d56602" alt="Chat Bot Logo" height="32" />
     Chat Bot 1.0
@@ -23,7 +23,7 @@ A simple yet powerful AI chatbot app built with **React 19** and **Vite 6**, usi
 - [react-markdown](https://www.npmjs.com/package/react-markdown)
 - [react-textarea-autosize](https://www.npmjs.com/package/react-textarea-autosize)
 
-## 🛠Getting Started
+## Getting Started
 
 ### Prerequisites
 
