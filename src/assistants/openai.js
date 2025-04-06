@@ -45,4 +45,16 @@ export class Assistant {
       throw new Error("Failed to fetch response from AI.");
     }
   }
+
+  async *chatStream(content, history) {
+    const result = await openai.chat.completions.create({
+      model: this.#model,
+      messages: [...history, { content, role: "user" }],
+      stream: true,
+    });
+
+    for await (const chunk of result) {
+      yield chunk.choices[0]?.delta?.content || "";
+    }
+  }
 }
