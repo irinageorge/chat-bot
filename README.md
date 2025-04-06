@@ -1,6 +1,8 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/13ecf90a-e679-41c1-bb3b-5181c9d56602" alt="Chat Bot Logo" height="16" />
-  <h1>Chat Bot 1.0</h1>
+  <h1>
+    <img src="https://github.com/user-attachments/assets/13ecf90a-e679-41c1-bb3b-5181c9d56602" alt="Chat Bot Logo" height="16" />
+    Chat Bot 1.0
+  </h1>
 </div>
 
 A simple yet powerful AI chatbot app built with **React 19** and **Vite 6**, using the **Google Generative AI** and **OpenAI** APIs. Includes Markdown rendering, auto-resizing text areas, and modern tooling for linting and developer experience.
