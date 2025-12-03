@@ -5,7 +5,21 @@
   </h1>
 </div>
 
-A simple yet powerful AI chatbot app built with **React 19** and **Vite 6**, using the **Google Generative AI** and **OpenAI** APIs. Includes Markdown rendering, auto-resizing text areas, and modern tooling for linting and developer experience.
+A simple and interactive **Chat Bot application** built with **React**.  
+This project demonstrates how to create a conversational interface where users can interact with a bot that responds dynamically.
+
+👉 Live Demo: [chat-bot-irinageorge.vercel.app](https://chat-bot-irinageorge.vercel.app)
+
+---
+
+## 📖 Features
+- Interactive chat interface
+- Real-time responses from the bot
+- Clean and responsive UI
+- Built with **React** and modern JavaScript
+- Easy to extend with new features or APIs
+
+---
 
 ## Tech Stack
 
@@ -47,3 +61,25 @@ cp .env.example .env
 ```bash
 npm run dev
 ```
+
+---
+
+## 🚀 Usage
+
+- Type a message in the input field and press **Enter** or click **Send**.
+- The bot will respond with a predefined or dynamic reply.
+- Extend the bot logic in `src/components/ChatBot.js` to add custom responses or integrate APIs.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.  
+You are free to use, modify, and distribute it with attribution.
+
+---
+
+## 👩‍💻 Author
+
+Developed by **Irina George**  
+GitHub: [@irinageorge](https://github.com/irinageorge)
